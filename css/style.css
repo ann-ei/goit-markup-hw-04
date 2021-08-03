@@ -108,11 +108,16 @@ img {
 .contacts .link {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 .contacts .item + .item {
   margin-left: 50px;
 }
+.contacts-icon {
+  margin-right: 10px;
+}
+
 .contacts a {
   font-weight: 500;
   font-size: 14px;
@@ -122,10 +127,12 @@ img {
 .contacts a:hover,
 .contacts a:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 /*main scren*/
 .main-screen {
   background-color: var(--darkest-color);
+  background-image: url(../images/main-bg.jpg);
   padding: 200px 0;
 }
 .main-title {
@@ -162,6 +169,14 @@ img {
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
+}
+.benefits-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F4FA;
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 .section-benefits > .benefits-box {
   flex-basis: calc(100% / 4 - 30px);
@@ -226,7 +241,7 @@ img {
   text-align: center;
 }
 .team-content {
-  padding: 30px 0;
+  padding: 30px 0 16px 0;
 }
 .team-people h3 {
   font-weight: 500;
@@ -242,6 +257,28 @@ img {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--descr-color);
+}
+.team-social-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.team-social-link {
+  padding: 12px;
+  margin-right: 10px;
+  display: block;
+  color: #fff;
+}
+.team-social-link:last-child {
+  margin-right: 0;
+}
+.team-social-icon {
+  fill: #ccc;
+}
+.team-social-link:hover {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  fill: #fff;
 }
 /*footer*/
 .footer {
