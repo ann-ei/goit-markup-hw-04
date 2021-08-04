@@ -48,6 +48,7 @@ img {
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .section {
   padding-top: 94px;
@@ -133,10 +134,12 @@ img {
 /*main scren*/
 .main-screen {
   background-color: var(--darkest-color);
-  background-image: linear-gradient(#00000082, #0000008f), url(../images/main-bg.jpg) ;
+  background-image: linear-gradient(rgba(47, 48, 58, .4), rgba(47, 48, 58, .4)), url(../images/main-bg.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 200px 0;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .main-title {
   font-weight: 900;
@@ -214,14 +217,20 @@ img {
   color: var(--text-color);
   margin-bottom: 50px;
 }
-.services-item {
-  margin-right: 30px;
-}
-.services-item:last-child {
-  margin-right: 0;
-}
+
 .services-images .services-item {
   display: inline-block;
+}
+.services-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.services-images > .services-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 /*team*/
 .our-team {
@@ -242,9 +251,10 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
+  background-color: #fff;
 }
 .team-content {
-  padding: 30px 0 16px 0;
+  padding: 30px 0;
 }
 .team-people h3 {
   font-weight: 500;
@@ -264,12 +274,15 @@ img {
 .team-social-box {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-top: 16px;
 }
 .team-social-link {
-  padding: 12px;
   margin-right: 10px;
-  display: block;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
   color: #fff;
 }
 .team-social-link:last-child {
@@ -377,10 +390,11 @@ img {
   justify-content: center;
   margin-bottom: 50px;
 }
+
 .portfolio-filter li + li {
   margin-left: 8px;
 }
-.portfolio-filter button {
+.filter-btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -397,6 +411,12 @@ img {
   background-color: var(--accent-color);
   color: var(--footer-color);
   cursor: pointer;
+  color: #fff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.current-btn {
+  background-color: var(--accent-color);
   color: #fff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -428,6 +448,9 @@ img {
   line-height: 1.9;
   letter-spacing: 0.03em;
   color: var(--descr-color);
+}
+.card {
+  display: block;
 }
 .card-content {
   padding: 20px 24px;
